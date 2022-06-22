@@ -1,4 +1,4 @@
-const service = require("../service/user.service")
+const userService = require("../service/user.service")
 
 class UserController {
   async create(ctx, next) {
@@ -7,7 +7,7 @@ class UserController {
     // console.log(user)
 
     // 查询数据
-    const result = await service.create(user)
+    const result = await userService.create(user)
 
     // 返回数据
     ctx.body = result
